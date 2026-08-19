@@ -1,134 +1,133 @@
 
-# Conditional Statement 
-#  3 blocks of conditional statements
-# if , elif, else
-x = 5
-if x == 5:
-    print(" statement is True ")
-elif x < 100:
-    print("x is less than 100")
-elif x ==5:
-    print("x is same as 5")
-
-else:
-    print("Wetin be this") 
+# Loops
+# break and continue
 
 
+# expression, iteration and iterable
 
-# Build a ussd application with conditional statement
+# iterate = i, a variable that is meant to keep the value inside the interable
+# iterable - data types where you have your value from  (mostly in mapping or sequence data types )
+# expression - what we want to perform
+# iteration - the act of looping
+#
 
-# Nested Conditional statement
-x = 5
-y = 20
-if x == 5:
-    if y < 10:
-        print("Bith statement are true")
-    else:
-        print("only first statemnet is true")
-else:
-    print("Both statement are false")
+# break - stop 
 
-#  if the mother if is wrong, nested will not run, it will move to the mother else
+fruits = ["berries", "orange", "banana", "melon", "cherry"]
 
-
-name = "Tolu"
-age = 40
-
-if age >= 18:
-    if age < 80:
-        print("You are eligible to vote")
-    else:
-        print("You are too old")
-else:
-    print("You are too young to vote")
+for i in fruits:
+    print(i)
+    if i == "melon":
+        break
+    print("close end")
 
 
-ussd = input("Enter your USSD: ")
-data = 100
-if ussd == "*312#":
+
+# nested for loop
+# for i in range(1, 13):
+#     print (f"Multiplication table {i}")
+#     for x in range(1, 13):
+#         print(f"{i} * {x} = {i * x}")
+
+
+# read on while loop
+
+x = 1
+while x >= 1:
+    if x == 5:
+        break
+    print(x)
+    x += 1
+
+y = 1
+
+while x <= 10:
+    print(x)
+    x += 1
+
+colors = ["blue", "orange", "white", "green", "indigo"]
+
+for i in colors:
+    print(i)
+    if i == "green":
+        break
+
+i = 0
+while i < len(colors):
+    x = colors[i]
+    print(x)
+    if x == "green":
+        break
+    i += 1
+
+
+i = 1
+while i < 10:
+    if i == 3:
+        break
+    print(i)
+    i += 1
+
+
+
+tickets = 10
+vip_ticket = 3
+while tickets <= 10:
+    name = input("Enter your name: ")
+    age = int(input("Enter your Age: "))
+
+    if age >= 18:
+        print("You are too young for this, go and watch anime")
+        break
+       
+    print("Ticket available")
+    tickets -= 1
+    print(f" selling out soon, {tickets} tickets remaining, you can purchase for your loved ones ")
+
     print("""
-        1. Data Plans
-        2. Enjoy 1gb for 4k
-        3. Voice plans
-        4. Gift Data
+        1. Regular
+        2. VIP
     """)
-    choice = input("Enter Your choice: ")
-    if choice == "1":
+    option = input("which ticket do you want")
+    if option == "1":
         print("""
-            1. daily
-            2. 2 to 3 days
-            3. weekly
-            4. 2 weeks
+        Welcome to the Home of Fortune
+        choose the film to watch below
+        1. Annie
+        2. Ninja
+        3. Spiderman
         """)
-        choice = input("Enter your choice: ")
+        choice = input("Enter your choice")
         if choice == "1":
-         print("You have succesfully subscribed for daily data plan")
+            print("Go to room 4, for a regular")
 
-        elif choice == "2":
-            print("You have successfully subscribed for 3 days data")
-        elif choice == "3":
-                print("You have successfully subscribed for weekly data")
-        elif choice == "2":
-                print("You have successfully subscribed for 2 weeks data bundle")
-        else:
-            print("inavlid choice")
-    elif choice == "2":
-        print(""" Are you sure you want to subscribe for 1gb for 4k 
-            1. Yes
-            2. No
-        """)
-        choice = input("Enter your choice: ")
-        if choice =="1":
-             print("You have successfully subscribed for 1gb for 4k")
-        elif choice == "2":
-            print("dial the code again to start again")
+    elif option == "2":
+        if vip_ticket < 1:
+            print("No more ticket")
+            continue
 
-        else:
-            print("inavlid choice")
-
-    elif choice == "3":
         print("""
-            1. $100 for 100 mins
-            2. $45 for 10 mins
-            3. $90 for 50 mins
-            """
-        )
-        choice = input("Enter your choice: ")
-
+                Welcome to the Home of Fortune
+                choose the film to watch below
+                1. Annie
+                2. Ninja
+                3. Spiderman
+        """)
+        choice = input("Enter your choice")
         if choice == "1":
-            print("you have successully subscribed for 100 mins for $100")
-        elif choice == "2":
-            print("you have successully subscribed for 10 mins for $45")
-        elif choice == "3":
-            print("you have successully subscribed for 50 mins for $50")
-        else:
-            print("inavlid choice")
-
-    elif choice == "4":
-        
-        recipientNumber = input("Enter recipient number: ")
-        amount = int(input("Enter the amount of data to be shared: "))
-        
-        if  len(recipientNumber) !=  11:
-            print("wrong recipient number")
-
-           
-        elif len(recipientNumber) == 11 and amount > 0:
-            print(f"you have successfully share {amount}gb of data to {recipientNumber} ")
-        else:
-            print("amount must be greater that zero")
-
-
-
-    else:
-        print("Wrong input")
+            print("Go to room 4, for vip")
+            vip_ticket -= 1
 
 else:
-    print("wrong ussd code")
-
-
+    print("No more ticket")
 
     
 
-    
+# i = 0
+# while i > 0:
+#     print(i)
+#     i += 1
+
+
+# range returns integer 
 
