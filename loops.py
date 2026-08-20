@@ -69,57 +69,85 @@ while i < 10:
     i += 1
 
 
+# Ticket system
 
-tickets = 10
-vip_ticket = 3
-while tickets <= 10:
-    name = input("Enter your name: ")
-    age = int(input("Enter your Age: "))
+# tickets = 10
+# vip_ticket = 3
+# while tickets <= 10:
+#     name = input("Enter your name: ")
+#     age = int(input("Enter your Age: "))
 
-    if age >= 18:
-        print("You are too young for this, go and watch anime")
-        break
+#     if age < 18:
+#         print("You are too young for this, go and watch anime")
+#         break
        
-    print("Ticket available")
-    tickets -= 1
-    print(f" selling out soon, {tickets} tickets remaining, you can purchase for your loved ones ")
+#     print("Ticket available")
+  
+#     print("""
+#         1. Regular
+#         2. VIP
+#     """)
+    
+#     option = input("which ticket do you want: ")
+#     if option == "1":
+#         print("""
+#         Welcome to the Home of Fortune
+#         choose the film to watch below
+#         1. Annie
+#         2. Ninja
+#         3. Spiderman
+#         """)
+#         choice = input("Enter your choice")
+       
+#         if choice == "1":
+#             tickets -= 1
+#             print(f" Congrats, ticket purchased successfully,  selling out soon, {tickets} tickets remaining, you can purchase for your loved ones ")
+#             print("Go to room 4, for a regular")
 
-    print("""
-        1. Regular
-        2. VIP
-    """)
-    option = input("which ticket do you want")
-    if option == "1":
-        print("""
-        Welcome to the Home of Fortune
-        choose the film to watch below
-        1. Annie
-        2. Ninja
-        3. Spiderman
-        """)
-        choice = input("Enter your choice")
-        if choice == "1":
-            print("Go to room 4, for a regular")
+#         elif choice == "2":
+#             tickets -= 1
+#             print(f" Congrats, ticket purchased successfully,  selling out soon, {tickets} tickets remaining, you can purchase for your loved ones ")
+#             print("go to room 309, for a regular")
 
-    elif option == "2":
-        if vip_ticket < 1:
-            print("No more ticket")
-            continue
+#         elif choice == "3":
+#             tickets -= 1
+#             print(f" Congrats, ticket purchased successfully,  selling out soon, {tickets} tickets remaining, you can purchase for your loved ones ")
+#             print("go to room 306, for a regular")
+#         else:
+#             print("Invalid Selection")
 
-        print("""
-                Welcome to the Home of Fortune
-                choose the film to watch below
-                1. Annie
-                2. Ninja
-                3. Spiderman
-        """)
-        choice = input("Enter your choice")
-        if choice == "1":
-            print("Go to room 4, for vip")
-            vip_ticket -= 1
+#     elif option == "2":
+#         if vip_ticket < 1:
+#             print("No more ticket")
+#             continue
 
-else:
-    print("No more ticket")
+#         print("""
+#                 Welcome to the Home of Fortune
+#                 choose the film to watch below
+#                 1. Annie
+#                 2. Ninja
+#                 3. Spiderman
+#         """)
+#         choice = input("Enter your choice")
+               
+#         if choice == "1":
+#             vip_ticket -= 1
+#             print(f" Congrats, ticket purchased successfully,  selling out soon, {tickets} tickets remaining, you can purchase for your loved ones ")
+#             print("Go to room 4, for a regular")
+        
+#         elif choice == "2":
+#             vip_ticket -= 1
+#             print(f" Congrats, ticket purchased successfully,  selling out soon, {tickets} tickets remaining, you can purchase for your loved ones ")
+#             print("go to room 309, for a regular")
+        
+#         elif choice == "3":
+#             vip_ticket -= 1
+#             print(f" Congrats, ticket purchased successfully,  selling out soon, {tickets} tickets remaining, you can purchase for your loved ones ")
+#             print("go to room 306, for a regular")
+#         else:
+#             print("Invalid Selection")
+# else:
+#     print("No more ticket")
 
     
 
@@ -130,4 +158,10 @@ else:
 
 
 # range returns integer 
+
+# for x in range(1, 13):
+#     print(f"Multiplication Table {x}")
+#     for y in range(1, 13):
+#         print(f"{x}*{y} = {x * y} ")
+#         continue
 
